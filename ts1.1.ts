@@ -104,3 +104,50 @@ function checkoutWorkers(customer: string, ...workerIDs: number[]): string[] {
 
 const myWorkers = checkoutWorkers("Oleksandr", 1, 2, 3, 4);
 myWorkers.forEach(w => console.log(w)); 
+/* Git — приклади команд для термінала (у корені репозиторію)
+
+# Налаштування (приперше)
+git config --global user.name "Ваше Ім'я"
+git config --global user.email "email@example.com"
+
+# Клонування віддаленого репозиторію
+git clone https://github.com/користувач/репозиторій.git
+
+# Ініціалізація нового локального репозиторію
+git init
+
+# Перевірити статус змін
+git status
+
+# Додати файли до індексу (staging)
+git add file.ts            # або git add . для всіх змін
+
+# Зафіксувати коміт
+git commit -m "Повідомлення коміту"
+
+# Відправити на віддалений репозиторій (push)
+git push origin main       # або git push origin <branch>
+
+# Отримати зміни з віддаленого (pull)
+git pull origin main
+
+# Робота з гілками
+git branch                # список гілок
+git branch feature-1      # створити гілку
+git checkout feature-1    # перейти на гілку
+git checkout -b feature-2 # створити і перейти
+
+# Злиття гілки
+git checkout main
+git merge feature-1
+
+# Повернення змін
+git reset --hard HEAD~1   # скасувати останній коміт (обережно)
+git revert <commit-hash>  # створити новий коміт, що відміняє
+
+# Інші корисні
+git log --oneline
+git diff
+git stash                 # тимчасово сховати локальні зміни
+git fetch                 # отримати оновлення без злиття
+*/
